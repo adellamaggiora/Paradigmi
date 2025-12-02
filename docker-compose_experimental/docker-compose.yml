@@ -1,10 +1,11 @@
-version: "2"
+version: "3"
 services: 
   paradigmi-playground:
-    image: paradigmi/paradigmi
+    build: . 
+    # image: paradigmi/paradigmi
     ports:
       - 8888:8888
     volumes:
       - ./../notebooks:/mnt/paradigmi
-    privileged: True
+    privileged: true
     mem_limit: 512m   # opzionale
