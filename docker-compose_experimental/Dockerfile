@@ -6,3 +6,5 @@ RUN apt-get update && apt-get install -y \
     texlive-xetex \
     texlive-fonts-recommended \
  && rm -rf /var/lib/apt/lists/*
+
+RUN pip install "nbconvert[webpdf]" && pyppeteer-install
